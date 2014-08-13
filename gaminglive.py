@@ -19,11 +19,8 @@ CONST_TOKEN = "_CHANGE_ME_"
 CONST_CONSOLE_MSG = True
 ################################################
 
-
-
-
 # Throttle or get banned from chat
-# time.sleep(3)
+time.sleep(3)
 
 
 def generate_msg(message):
@@ -56,7 +53,7 @@ def on_gaminglive_open(wsptr):
 
 wss_url = "ws://api.gaminglive.tv/chat/%s?nick=%s&authToken=%s" % (CONST_BROADCASTER, CONST_USERNAME, CONST_TOKEN)
 print("=== Starting up: gaminglivebot/0.0.1\n=== github.com/dillpickle/gaminglive for updates")
-if CONST_USERNAME == "c_CHANGE_ME_": sys.exit("==== Please update your configuration.")
+if CONST_USERNAME == "_CHANGE_ME_": sys.exit("==== Please update your configuration.")
 
 ws = websocket.WebSocketApp(wss_url,
                             on_message = on_gaminglive_msg_in,
